@@ -1,0 +1,21 @@
+@import "../../../../../assets/sass/abstracts/_variables";
+@import "../../../../../assets/sass/base/_typography";
+@import "../../../../../assets/sass/abstracts/_mixins";
+@import "../../../../../assets/sass/base/_base";
+
+
+
+
+
+.acceuil__background {
+    width: 100%;
+    height: $height;
+    position: absolute;
+    background-color: aqua;
+    background-image: url("../../../../../assets/images/background/back_header.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+

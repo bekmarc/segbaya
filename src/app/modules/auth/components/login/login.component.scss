@@ -1,7 +1,7 @@
-@import "../assets/sass/abstracts/_variables";
-@import "../assets/sass/base/_typography";
-@import "../assets/sass/abstracts/_mixins";
-@import "../assets/sass/base/_base";
+@import "../../../../../assets/sass/abstracts/_variables";
+@import "../../../../../assets/sass/base/_typography";
+@import "../../../../../assets/sass/abstracts/_mixins";
+@import "../../../../../assets/sass/base/_base";
 
 
 
@@ -17,7 +17,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 4rem 6rem 4rem 6rem;
-        background-image: url("../assets/images/background/background_login.png");
+        background-image: url("../../../../../assets/images/background/background_login.png");
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;

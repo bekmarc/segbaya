@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "sf-display-b";
+    src: url("./SF-Pro-Display-Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "sf-display-m";
+    src: url("./SF-Pro-Display-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "sf-display";
+    src: url("./SF-Pro-Display-Regular.ttf") format("opentype");
+}
