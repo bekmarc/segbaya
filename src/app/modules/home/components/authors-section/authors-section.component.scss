@@ -1,0 +1,16 @@
+
+@import "../../../../../assets/sass/abstracts/_variables";
+@import "../../../../../assets/sass/base/_typography";
+@import "../../../../../assets/sass/abstracts/_mixins";
+@import "../../../../../assets/sass/base/_base";
+
+
+.authors {
+    margin: 1.4rem;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

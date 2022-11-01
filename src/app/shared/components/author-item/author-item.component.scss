@@ -1,0 +1,48 @@
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+
+.author {
+    height: 14rem;
+    width: 14rem;
+    margin: .6rem;
+
+
+
+    transition: $bezier-transition;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        border-radius: .4rem;
+        background-color: $color-grey-light-1;
+        object-fit: cover;
+        
+
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+        opacity: 0.8;
+
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+    &:hover > &__author-name {
+        color: $color-primary;
+
+    }
+
+    &__author-name {
+        position: relative;
+        top: -3rem;
+        text-align: center;
+        color: $color-white;
+        font-size: .9rem;
+    }
+}

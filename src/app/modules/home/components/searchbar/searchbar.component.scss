@@ -1,0 +1,98 @@
+@import "../../../../../assets/sass/abstracts/_variables";
+@import "../../../../../assets/sass/base/_typography";
+@import "../../../../../assets/sass/abstracts/_mixins";
+@import "../../../../../assets/sass/base/_base";
+
+
+.acceuil__title-container {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color : $color-white;
+    top: 8rem;
+    width: 100%;
+
+
+
+
+
+    &__title {
+        font-family: 'sf-display-b';
+        font-size: 1.4rem;
+        user-select: text;
+
+        &-mark {
+            font-family: 'sf-display-b';
+
+            background-color: $color-primary;
+        }
+    }
+
+    &__sub-title {
+        margin: .8rem 0rem .8rem 0rem;
+        font-size: 1rem;
+
+        color : $color-grey-dark;
+    }
+
+}
+
+.acceuil__search-bar {
+    
+    &-container {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        margin-top: 1rem;
+        height: 3rem;
+    }
+
+    &__select {
+        border: none;
+        padding: .4rem;
+        width: 11rem;
+        border-top-left-radius: .2rem;
+        border-bottom-left-radius: .2rem;
+
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+    }
+
+    &__input {
+        padding: .4rem;
+        width: 20rem;
+        border: none;
+        border-radius: 0rem;
+        background-color: $color-grey-light-1;
+
+        &:focus {
+            outline: none;
+            background-color: $color-white;
+            box-shadow: none;
+        }
+    }
+    
+    &__button {
+        display: flex;
+        background-color: $color-primary;
+        width: 8rem;
+        align-items: center;
+        justify-content: center;
+        @include removeLinkDefault();
+        color : $color-white;
+        font-family: "sf-display-m";
+        border : none;
+        border-radius: 0rem;
+        border-top-right-radius: .2rem;
+        border-bottom-right-radius: .2rem;
+
+    }
+    
+    
+}

@@ -1,0 +1,170 @@
+@import "../../../../../assets/sass/abstracts/_variables";
+@import "../../../../../assets/sass/base/_typography";
+@import "../../../../../assets/sass/abstracts/_mixins";
+@import "../../../../../assets/sass/base/_base";
+
+
+
+
+
+
+@include inputStyle;
+
+
+.loggin {
+    &__back {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem 6rem 4rem 6rem;
+        background-image: url("../../../../../assets/images/background/background_login.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+
+        @include respond(phone) {
+            justify-content: center;
+            padding: 2rem 1rem 2rem 1rem;
+        }
+
+        @include respond(tab-port) {
+            justify-content: center;
+            padding: 2rem 1rem 2rem 1rem;
+        }
+
+
+
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__title {
+            color: $color-white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            font-family: 'sf-display';
+
+            width: 24rem;
+        }
+
+        &__icone {
+            color: $color-white;
+        }
+
+        @include respond(phone) {
+            display: none;
+
+        }
+
+        @include respond(tab-port) {
+            display: none;
+
+        }
+
+
+    }
+
+    &__right {
+        width: 24rem;
+
+        @include respond(phone) {
+            margin: auto;
+
+        }
+
+        @include respond(tab-port) {
+            margin: auto;
+
+        }
+
+
+        &__box {
+            background-color: $color-white;
+            padding: 2rem 1.4rem 2rem 1.4rem;
+            border-radius: .2rem;
+
+            @include respond(phone) {
+                padding: 2rem 1rem 2rem 1rem;
+
+            }
+
+            &__title {
+                color: $color-black;
+                font-family: "sf-display-m";
+                font-size: 1.4rem;
+
+            }
+
+            &__input-control {
+                margin: 2rem 0rem 2rem 0rem;
+
+                &__label {
+                    margin: .2rem 0rem .2rem 0rem;
+                    font-size: .8rem;
+                    color: $color-grey-dark-3;
+                }
+
+                &__input {
+                    padding: .5rem .5rem .5rem .5rem;
+                    border-radius: .3rem;
+                }
+            }
+
+            &__button {
+
+                &--container {
+                    width: 100%;
+                }
+            }
+
+            & &--connect-btn {
+                border: none;
+                padding: .9rem;
+                border-radius: .3rem;
+                width: 100%;
+                margin: .5rem 0rem .5rem 0rem;
+                background-color: $color-primary;
+                color: $color-white;
+                font-family: "sf-display-m";
+                font-size: 80%;
+
+                &--primary {
+                    background-color: rgba($color-primary, $input-opacity-2);
+
+                    &:hover {
+                        background-color: rgba($color-primary, $input-opacity-1);
+                    }
+
+                    &:active {
+                        background-color: rgba($color-primary, $input-opacity-2);
+                    }
+                }
+
+                &--secondary {
+                    background-color: rgba($color-grey-light-1, $input-opacity-3);
+                    color: $color-primary;
+
+                    &:hover {
+                        background-color: rgba($color-grey-light-1, $input-opacity-1);
+                    }
+
+
+                    &:active {
+                        background-color: rgba($color-grey-light-1, $input-opacity-2);
+                    }
+                }
+
+
+            }
+        }
+    }
+}

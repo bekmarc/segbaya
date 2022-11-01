@@ -1,0 +1,43 @@
+// COLORS
+$color-primary: #19B476;
+$color-primary-light: #C2F2DC;
+$color-primary-dark: #027333;
+
+$color-secondary: #F2801D;
+$color-secondary-light: #F2BB78;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #F2F2F2;
+
+$color-grey-dark: #C8D3CD;
+$color-grey-dark-2: #A1A3A2;
+$color-grey-dark-3: #707070;
+
+$color-white: #FFFFFF;;
+$color-black: #001F0D;
+
+// OPACITY
+$input-opacity-4: .2;
+$input-opacity-3: .6;
+$input-opacity-2: .8;
+$input-opacity-1: 1;
+
+// FONT
+$default-font-size: 1.6rem;
+
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+//HEIGHT HEADER
+$height : 24rem;
+
+/** TRANSITION BEZIER **/
+
+$bezier-transition : all .3s cubic-bezier(.23,-0.19,.88,1.17);

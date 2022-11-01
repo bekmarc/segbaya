@@ -1,0 +1,25 @@
+
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+.section-header {
+    margin: 3rem .6rem 2rem .6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text-title {
+        width: 60%;
+        &__head {
+            font-family: 'sf-display-b';
+            font-size: 1.4rem;
+            margin: .2rem 0rem .2rem 0rem;
+        }
+
+        &__sub-head {
+            font-size: 1rem;
+
+        }
+    }
+}
