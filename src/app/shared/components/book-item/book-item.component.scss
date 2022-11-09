@@ -1,0 +1,129 @@
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+
+.book {
+    height: 14rem;
+    width: 14rem;
+    margin: .6rem;
+
+
+    .book_inffo {
+        max-height: 14rem;
+        width: 14rem;
+
+        transition: $bezier-transition;
+
+        &__image {
+            width: 100%;
+            height: 9.5rem;
+            border-radius: .4rem;
+            background-color: $color-grey-light-1;
+            object-fit: cover;
+
+
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.04);
+            opacity: 0.8;
+
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+
+        &:hover>&__book-name {
+            color: $color-primary;
+
+        }
+
+        &__book-name {
+            position: relative;
+            color: $color-black;
+            font-size: .8rem;
+            margin: .4rem 0rem .4rem 0rem;
+        }
+
+        &__book-title {
+            color: $color-black;
+            font-weight: 700;
+            font-size: .8rem;
+        }
+    }
+
+    /***** BOOK HOVER INFOS ****/
+
+    &__hover {
+        position: absolute;
+        display: flex;
+        background-color: $color-white;
+        border: 1px solid $color-grey-dark;
+        flex-direction: column;
+        height: 14rem;
+        width: 14rem;
+        //align-items: ;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: .4rem;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        //transform: translateY(-100%);
+
+        .hover__title {
+            font-size: .9rem;
+            font-weight: 700;
+        }
+
+        .hover__infos_tittle {
+            color: $color-grey-dark-3;
+        }
+
+        .hover__author-title {
+            font-size: .9rem;
+            margin-top: 1rem;
+
+        }
+
+        .hover__book-page {
+            font-size: .9rem;
+
+        }
+
+        .hover__book-edition {
+            font-size: .9rem;
+
+        }
+
+        .hover__book-info {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .book-info__image-container {
+
+                .book-info__image-round {
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    border-radius: 50%;
+                    background-color: $color-grey-light-1;
+                    object-fit: cover;
+                }
+
+            }
+
+            .book-info__edition {
+                font-size: 0.74rem;
+            }
+        }
+
+
+    }
+}

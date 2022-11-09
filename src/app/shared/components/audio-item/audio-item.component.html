@@ -1,1 +1,78 @@
-<p>audio-item works!</p>
+<div class="audio-item">
+    <div class="audio-item__infos">
+        <div class="audio-item__infos__user">
+            <div class="audio-item__infos__user__image">
+                <img class="img_user" src="/assets/images/background/back_header.webp" alt="">
+            </div>
+            <div class="audio-item__infos__user__titres">
+                <div class="audio-item__infos__user__titres__author">AMESSOSSOE JEAN ATTISSO</div>
+                <div class="audio-item__infos__user__titres__title">KFC - The King of Fighteen</div>
+                <div class="audio-item__infos__user__titres__categorie">Amedeka album</div>
+            </div>
+        </div>
+        <div class="audio-item__infos--like">
+            <svg class="audio-item__infos--like__svg" xmlns="http://www.w3.org/2000/svg" width="25.389" height="23.544"
+                viewBox="0 0 25.389 23.544">
+                <path id="like__bordered"
+                    d="M19.682,3a7.292,7.292,0,0,0-5.488,2.549A7.292,7.292,0,0,0,8.707,3,6.706,6.706,0,0,0,2,9.707C2,14.793,7.99,19.722,9.659,21.28c1.923,1.793,4.535,4.1,4.535,4.1s2.612-2.3,4.535-4.1c1.669-1.557,7.659-6.486,7.659-11.573A6.706,6.706,0,0,0,19.682,3Zm-2.06,15.987c-.216.2-.4.365-.556.507-.916.854-2,1.833-2.872,2.616-.873-.783-1.957-1.763-2.872-2.616-.154-.143-.341-.313-.556-.507-1.732-1.565-6.328-5.72-6.328-9.28A4.273,4.273,0,0,1,8.707,5.439a4.851,4.851,0,0,1,3.553,1.6L14.194,9.1l1.934-2.063a4.892,4.892,0,0,1,3.553-1.6A4.273,4.273,0,0,1,23.95,9.707C23.95,13.267,19.354,17.422,17.622,18.987Z"
+                    transform="translate(-1.5 -2.5)" fill="#001f0d" stroke="#c8d3cd" stroke-width="1" />
+            </svg>
+        </div>
+    </div>
+    <div class="audio-item__lecteur">
+        <div class="audio-item__lecteur__play">
+            <button (click)="togglePausePlay()" class="play_btn">
+                <svg *ngIf="toggleValue === false" class="play_svg" xmlns="http://www.w3.org/2000/svg" width="26"
+                    height="31" viewBox="0 0 26 31">
+                    <path id="play_buttons"
+                        d="M14.641,1.441a1,1,0,0,1,1.718,0L30.1,24.488A1,1,0,0,1,29.24,26H1.76A1,1,0,0,1,.9,24.488Z"
+                        transform="translate(26) rotate(90)" fill="#19b476" />
+                </svg>
+                <svg *ngIf="toggleValue === true" id="play_btn" xmlns="http://www.w3.org/2000/svg" width="11.778"
+                    height="13.881" viewBox="0 0 11.778 13.881">
+                    <path id="Ligne_5" data-name="Ligne 5" d="M.365,13.881H-3V0H.365Z" transform="translate(3 0)"
+                        fill="#19b476" />
+                    <path id="Ligne_6" data-name="Ligne 6" d="M.365,13.881H-3V0H.365Z" transform="translate(11.413 0)"
+                        fill="#19b476" />
+                </svg>
+            </button>
+        </div>
+        <div class="audio-item__lecteur__slider">
+
+            <span class="timer begin-time">{{currentTime}}</span>
+            <div class="lecteur-slider">
+                <div #pod class="slider-value">
+                    <span>{{currentTime}}</span>
+                </div>
+                <input type="range" #loading_audio #ref (input)="setSeek($event)" min="0" max="{{durationSeek}}"
+                    step="1" [value]="seek" class="audio-item__lecteur__slider__line">
+                <div #loading_line class="position-loading"></div>
+            </div>
+            <div class="selectorBtn">
+                <div class="selectBtn"></div>
+            </div>
+            <span class="timer end-time">{{duration}}</span>
+        </div>
+        <div class="audio-item__lecteur__repeat-button">
+            <button (click)="toggleMute()" class="boucle_btn">
+                <svg *ngIf="muteVol === false" xmlns="http://www.w3.org/2000/svg" width="14.003" height="11.461" viewBox="0 0 14.003 11.461">
+                    <path id="audio_ico"
+                        d="M7.367,3,3.547,6.82H2.273A1.273,1.273,0,0,0,1,8.094V9.367a1.273,1.273,0,0,0,1.273,1.273H3.547l3.82,3.82Zm5.4.328-.9.9a6.356,6.356,0,0,1,0,9l.9.9A7.649,7.649,0,0,0,12.769,3.328Zm-1.8,1.8-.9.9a3.81,3.81,0,0,1,0,5.4l.9.9A5.1,5.1,0,0,0,10.969,5.129Zm-1.8,1.8-.9.9a1.263,1.263,0,0,1,0,1.8l.9.9A2.557,2.557,0,0,0,9.168,6.93Z"
+                        transform="translate(-1 -3)" fill="#707070" />
+                </svg>
+                <svg *ngIf="muteVol === true" xmlns="http://www.w3.org/2000/svg" width="14.003" height="12.049" viewBox="0 0 14.003 12.049">
+                    <g id="audio_mute" transform="translate(-1594.499 -842.773)">
+                      <path id="icons8_audio" d="M7.367,3,3.547,6.82H2.273A1.273,1.273,0,0,0,1,8.094V9.367a1.273,1.273,0,0,0,1.273,1.273H3.547l3.82,3.82Zm5.4.328-.9.9a6.356,6.356,0,0,1,0,9l.9.9A7.649,7.649,0,0,0,12.769,3.328Zm-1.8,1.8-.9.9a3.81,3.81,0,0,1,0,5.4l.9.9A5.1,5.1,0,0,0,10.969,5.129Zm-1.8,1.8-.9.9a1.263,1.263,0,0,1,0,1.8l.9.9A2.557,2.557,0,0,0,9.168,6.93Z" transform="translate(1593.499 840.362)" fill="#707070"/>
+                      <path id="Union_21" data-name="Union 21" d="M-1071.96,3584.364l-.731.706-.309-.321.731-.705-.71-.736.319-.309.71.736.731-.706.309.319-.731.706.71.735-.319.309Z" transform="translate(2674.547 -2740.227)" fill="#707070"/>
+                    </g>
+                  </svg>
+
+            </button>
+        </div>
+
+        <div class="audio-item__lecteur__volume-slider">
+            <input type="range" min="0" max="1" step="0.01" [value]="0.5" (input)="setVolume($event)"
+                class="audio-item__lecteur__volume--line">
+        </div>
+    </div>
+</div>

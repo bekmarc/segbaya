@@ -12,6 +12,7 @@ import { VideosSectionComponent } from './components/videos-section/videos-secti
 import { PublishersSectionComponent } from './components/publishers-section/publishers-section.component';
 import { SectionHeaderComponent } from './components/acceuil/section-header/section-header.component';
 import { SectionHeaderAllComponent } from './components/acceuil/section-header-all/section-header-all.component';
+import { BooksSectionComponent } from './components/books-section/books-section.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SectionHeaderAllComponent } from './components/acceuil/section-header-a
     VideosSectionComponent,
     PublishersSectionComponent,
     SectionHeaderComponent,
-    SectionHeaderAllComponent
+    SectionHeaderAllComponent,
+    BooksSectionComponent
   ],
   imports: [
     CommonModule,
