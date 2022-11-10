@@ -5,8 +5,8 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 29rem);
-        grid-template-rows: repeat(2, 1fr);
         row-gap: 1rem;
+        justify-content: center;
         column-gap: 2rem;
     }
 
