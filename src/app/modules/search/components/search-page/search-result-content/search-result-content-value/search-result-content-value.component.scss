@@ -1,0 +1,29 @@
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+
+.content-value {
+    color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .head {
+        font-family: "sf-display-b";
+        font-size: 1.18rem;
+        margin: .5rem 0rem .5rem 0rem;
+        .head-mute {
+            color: $color-grey-dark-2;
+            font-family: "sf-display-m";
+
+        }
+    }
+
+    .sub-head {
+        margin: 0rem 0rem 1rem 0rem;
+        color: $color-grey-dark-3;
+    }
+}

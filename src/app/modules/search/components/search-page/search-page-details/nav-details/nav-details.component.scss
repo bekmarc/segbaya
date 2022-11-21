@@ -1,0 +1,43 @@
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+
+.navbar {
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    //border-bottom: 0.1rem solid rgba($color-grey-dark, $alpha: .4);
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+    font-size: .9rem;
+
+
+    &-item {    
+        margin: 0rem 1rem 0rem 1rem;
+        padding: .3rem 0rem .3rem 0rem;
+        @include removeLinkDefaultHearderSearch();
+        transition: color .2s  bezierFunc(), font-weight .2s  bezierFunc();
+
+        &:hover {
+            color: $color-primary;
+            font-weight: 600;
+        }
+
+        
+    }
+    &-item:nth-child(1) {
+        margin-left: 0rem;
+    }
+
+    .active-item {
+        color: $color-primary;
+        font-weight: 600;
+        border-bottom: 0.16rem solid $color-primary;
+        transition: color .2s  bezierFunc(), font-weight .2s  bezierFunc();
+
+    }
+}

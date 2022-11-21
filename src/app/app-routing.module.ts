@@ -9,6 +9,14 @@ const routes: Routes = [
      loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule)
     },
     {
+      path:"search",
+     loadChildren: () => import('./modules/search/search.module').then((m) => m.SearchModule)
+    },
+    {
+      path:"paiement",
+     loadChildren: () => import('./modules/paiement/paiement.module').then((m) => m.PaiementModule)
+    },
+    {
       path:"",
      loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule)
     },

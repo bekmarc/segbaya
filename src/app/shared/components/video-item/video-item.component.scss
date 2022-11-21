@@ -1,0 +1,118 @@
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+
+.video {
+    height: 14rem;
+    width: 16rem;
+    margin: .6rem;
+    position: relative;
+
+
+    transition: $bezier-transition;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        border-radius: .4rem;
+        object-fit: cover;
+        background-color: $color-grey-light-1;
+
+
+
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+        opacity: 0.8;
+
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    &:hover>&__author-name {
+        color: $color-primary;
+
+    }
+
+    &__author-name {
+        position: relative;
+        top: -3rem;
+        text-align: center;
+        color: $color-white;
+        font-size: .9rem;
+        justify-content: space-between;
+    }
+
+   
+    .play-button {
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-black, .2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0rem;
+        border-top-left-radius: .4rem;
+        border-top-right-radius: .4rem;
+
+        .svg-btn {
+            
+            outline: none;
+            border:none;
+            background-color: transparent;
+        }
+    }
+
+    &__card-info {
+
+        display: flex;
+        flex-direction: row;
+        background-color: rgba($color-black, .8);
+        position: absolute;
+        bottom: 0rem;
+        padding: .6rem;
+        border-bottom-left-radius: .4rem;
+        border-bottom-right-radius: .4rem;
+
+        &__left {
+            max-width: 70%;
+            margin-right: .4rem;
+
+            &-text {
+                font-size: .79rem;
+                font-family: "sf-display-m";
+                color: $color-grey-light-1;
+                text-overflow: ellipsis;
+                word-wrap: break-word;
+                display: '-webkit-box';
+            }
+
+
+        }
+
+        &__right {
+            width: 50%;
+            background-color: rgba($color-grey-dark, .1);
+            display: flex;
+            align-items: center;
+            height: 2.4rem;
+            justify-content: center;
+            border-radius: .2rem;
+
+            &-text {
+                font-size: .79rem;
+                text-align: center;
+                color: $color-white;
+
+            }
+        }
+    }
+}

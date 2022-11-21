@@ -1,0 +1,66 @@
+@import "src/assets/sass/index";
+
+$margin-text: 1rem 0rem 1rem 0rem;
+
+.paiement-view {
+    display: flex;
+    align-items: center;
+    background-color: $color-grey-light-1;
+    padding: 0rem 2rem 0rem 2rem;
+    height: 100vh;
+    flex-direction: column;
+
+    &__goback-btn {
+        .logo-content {
+            margin-bottom: 2rem;
+        }
+        &__logo {
+            width: 7rem;
+            height: 2rem;
+        }
+        &__bouton {
+            @include setDefaultBtn();
+            padding: .6rem 1rem;
+            border-radius: $border-radius-size-1;
+            font-size: .9rem;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: $color-grey-dark-2;
+            margin-bottom: 1rem;
+        
+            &::before {
+                content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOC4wNyIgaGVpZ2h0PSIxNC4xNDEiIHZpZXdCb3g9IjAgMCAxOC4wNyAxNC4xNDEiPg0KICA8cGF0aCBpZD0ibGVmdC1hcnJvdyIgZD0iTTEwLDQuOTMsMi45MywxMiwxMCwxOS4wN2wxLjUtMS41TDYuOTMsMTNIMjFWMTFINi45M0wxMS41LDYuNDNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMi45MyAtNC45MykiIGZpbGw9IiNhMWEzYTIiLz4NCjwvc3ZnPg0K");
+                width: 1rem;
+                height: 1rem;
+                fill: $color-primary;
+                margin-right: .4rem;
+
+            }
+
+        }
+    }
+
+    &__container {
+        background-color: $color-white;
+        width: 90%;
+        height: 100%;
+        padding: 3rem;
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-left {
+            width: 36%;
+        }
+
+        &-right {
+            max-width: 36%;
+
+        }
+    }
+}

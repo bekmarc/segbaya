@@ -6,73 +6,27 @@
 
 .book {
     height: 14rem;
-    width: 14rem;
+    width: 16rem;
     margin: .6rem;
+    position: relative;
 
 
-    .book_inffo {
-        max-height: 14rem;
-        width: 14rem;
+     /***** BOOK HOVER INFOS ****/
 
-        transition: $bezier-transition;
-
-        &__image {
-            width: 100%;
-            height: 9.5rem;
-            border-radius: .4rem;
-            background-color: $color-grey-light-1;
-            object-fit: cover;
-
-
-        }
-
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.04);
-            opacity: 0.8;
-
-        }
-
-        &:active {
-            opacity: 0.3;
-        }
-
-        &:hover>&__book-name {
-            color: $color-primary;
-
-        }
-
-        &__book-name {
-            position: relative;
-            color: $color-black;
-            font-size: .8rem;
-            margin: .4rem 0rem .4rem 0rem;
-        }
-
-        &__book-title {
-            color: $color-black;
-            font-weight: 700;
-            font-size: .8rem;
-        }
-    }
-
-    /***** BOOK HOVER INFOS ****/
-
-    &__hover {
+     &__hover {
         position: absolute;
         display: flex;
         background-color: $color-white;
         border: 1px solid $color-grey-dark;
         flex-direction: column;
         height: 14rem;
-        width: 14rem;
+        width: 16rem;
         //align-items: ;
         justify-content: space-between;
         padding: 1rem;
         border-radius: .4rem;
-        opacity: 0;
-        visibility: hidden;
         display: none;
+        bottom: 0rem;
         //transform: translateY(-100%);
 
         .hover__title {
@@ -126,4 +80,47 @@
 
 
     }
+
+    .book_inffo {
+        max-height: 14rem;
+        width: 16rem;
+
+        transition: $bezier-transition;
+
+        &__image {
+            width: 100%;
+            height: 9.5rem;
+            border-radius: .4rem;
+            background-color: $color-grey-light-1;
+            object-fit: cover;
+
+
+        }
+
+       
+
+        /* &:active {
+            opacity: 0.3;
+        } */
+
+        &:hover ~ .book__hover {
+            color: $color-primary;
+            display: flex;
+        }
+
+        &__book-name {
+            position: relative;
+            color: $color-black;
+            font-size: .8rem;
+            margin: .4rem 0rem .4rem 0rem;
+        }
+
+        &__book-title {
+            color: $color-black;
+            font-weight: 700;
+            font-size: .8rem;
+        }
+    }
+
+   
 }

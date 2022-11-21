@@ -1,0 +1,21 @@
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+.search-page {
+
+    &-content {
+        display: flex;
+        justify-content: center;
+
+        /* &-filter {
+            width: 24%;
+        } */
+
+        &-result {
+            padding: 1rem;
+        }
+    }
+
+}

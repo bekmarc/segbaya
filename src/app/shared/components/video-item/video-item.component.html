@@ -1,0 +1,37 @@
+<div class="video">
+    <img class="video__image" src="../../../../assets/images/background/back_header.webp" alt="">
+    <div class="play-button">
+        <button class="svg-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="49"
+                viewBox="0 0 44 49">
+                <defs>
+                    <filter id="play-btn-video" x="0" y="0" width="44" height="49" filterUnits="userSpaceOnUse">
+                        <feOffset dy="3" input="SourceAlpha" />
+                        <feGaussianBlur stdDeviation="3" result="blur" />
+                        <feFlood flood-color="#2d2b2b" flood-opacity="0.157" />
+                        <feComposite operator="in" in2="blur" />
+                        <feComposite in="SourceGraphic" />
+                    </filter>
+                </defs>
+                <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#play-btn-video)">
+                    <path id="play-btn-video-2" data-name="play-btn-video"
+                        d="M14.641,1.441a1,1,0,0,1,1.718,0L30.1,24.488A1,1,0,0,1,29.24,26H1.76A1,1,0,0,1,.9,24.488Z"
+                        transform="translate(35 6) rotate(90)" fill="#fff" />
+                </g>
+            </svg>
+        </button>
+    </div>
+    <div class="video__card-info">
+        <div class="video__card-info__left">
+            <p class="video__card-info__left-text">
+                Devenir indestructible du point
+                de vue mentale et physique
+            </p>
+        </div>
+        <div class="video__card-info__right">
+            <p class="video__card-info__right-text">
+                90 heure
+            </p>
+        </div>
+    </div>
+</div>

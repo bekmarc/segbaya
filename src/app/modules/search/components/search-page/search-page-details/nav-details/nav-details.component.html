@@ -1,0 +1,4 @@
+<div class="navbar">
+    <a [ngClass]="typeDetails === 'contenu' ? 'active-item':''"  (click)="isClickMe({typeDetails:'contenu'})" class="navbar-item">Contenu</a>
+    <a [ngClass]="typeDetails === 'description' ? 'active-item':''"  (click)="isClickMe({typeDetails:'description'})" class="navbar-item">Description</a>
+</div>

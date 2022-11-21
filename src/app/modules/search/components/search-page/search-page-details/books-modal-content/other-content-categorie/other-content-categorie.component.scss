@@ -1,0 +1,91 @@
+@import "src/assets/sass/index";
+
+$margin-text: 1rem 0rem 1rem 0rem;
+
+.other-content-categorie {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-size: $dot-9rem-font-size;
+        color: $color-grey-dark-3;
+        margin: $margin-text;
+    }
+
+    &__content {
+        &__element {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom: .6rem;
+            transition: $bezier-transition;
+
+            &:hover {
+                opacity: .8;
+                cursor: pointer;
+            }
+
+            &__card {
+                width: 5rem;
+                height: 4.4rem;
+                background-color: $color-grey-dark;
+                margin-right: .8rem;
+                border-radius: $border-radius-size-1;
+            }
+
+            &__text {
+                font-size: $dot-8rem-font-size;
+                &--author {
+                    font-size: $dot-7rem-font-size;
+                    color: $color-grey-dark-2;
+                }
+                &--title {
+                    color: $color-grey-dark-3;
+                    font-size: $dot-8rem-font-size;
+                    margin: .2rem 0rem;
+                }
+                &--amount {
+                    font-size: $dot-8rem-font-size;
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+    &__content__publisher {
+        font-size: $dot-8rem-font-size;
+        display: flex;
+        flex-direction: row;
+        border: $border-button;
+        padding: .4rem;
+        border-radius: $border-radius-size-1;
+        margin-top: .75rem;
+
+        &__image-content {
+
+            background-color: $color-grey-dark;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+
+
+        }
+
+        &__text {
+
+            &--name {
+                color: $color-black;
+                font-weight: 600;
+            }
+
+            &--nbrpodcast {
+                font-size: .8rem;
+            }
+
+            &--allpost {
+                font-size: .7rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+.books-modal-content {
+
+    
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 1rem 0rem 1rem 0rem;
+    color: $color-black;
+    &__header {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        &__left {
+
+
+            
+            &-title {
+                font-size: .8rem;
+                font-weight: 600;
+            }
+            
+            &-author {
+                font-size: .8rem;
+                color: $color-grey-dark-3;
+
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: row;
+
+            &-content {
+
+                margin-right: 2rem;
+
+                &-head {
+                    font-size: .9rem;
+                    font-weight: 600;
+                }
+                
+                &-sub-head {
+                    font-size: .8rem;
+                    color: $color-grey-dark-3;
+                }
+            }
+
+            &-button-content {
+
+                &-button {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    border-radius: .3rem;
+                    @include setDefaultBtn;
+                    @include setEffectHoverRealBtn;
+                    padding: .4rem 2rem .4rem 2rem;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+
+    &__middle {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 2rem;
+
+        &__left {
+            display: flex;
+            flex-direction: row;
+
+            width: 76%;
+            &__card {
+                width: 20rem;
+                height: 24rem;
+                border-radius: .3rem;
+                border: .08rem solid $color-grey-dark;
+                margin-right: 1.5rem;
+            }
+
+            &__tab-bar {
+
+            }
+        }
+
+        &__right {
+            width: 24%;
+
+        }
+    }
+}
+
+

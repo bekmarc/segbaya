@@ -13,7 +13,6 @@
     transform: translate(-50%, -50%);
 }
 
-
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
@@ -34,31 +33,37 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };    //600px
+        @media only screen and (max-width: 37.5em) {
+            @content;
+        } //600px
     }
     @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) { @content };     //900px
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        } //900px
     }
     @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) { @content };    //1200px
+        @media only screen and (max-width: 75em) {
+            @content;
+        } //1200px
     }
     @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) { @content };    //1800
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        } //1800
     }
 }
-
 
 /*
     INPUT STYLE
 
 */
 
-
 @mixin inputStyle {
-    input[type=text] {
+    input[type="text"] {
         border: 0.09rem solid rgba($color-grey-dark-2, $input-opacity-4);
-        transition: border .2s ease;
-    
+        transition: border 0.2s ease;
+
         &:focus {
             border: 0.09rem solid rgba($color-primary, $input-opacity-3);
             box-shadow: 1px 1px 8px rgba($color-primary, $input-opacity-4);
@@ -66,11 +71,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
     }
 }
 
-
 /**** REMOVE DEFAULT BUTTON STYLE *****/
 @mixin marginHeader() {
     margin: 0rem 2rem 0rem 2rem;
+}
 
+@mixin marginHeaderSearch() {
+    margin: 0rem 1rem 0rem 1rem;
 }
 @mixin removeLinkDefault() {
     color: $color-grey-dark;
@@ -83,26 +90,59 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
     :hover {
     }
+}
+@mixin removeLinkDefaultHearderSearch() {
+    color: $color-grey-dark-3;
+    text-decoration: none;
+    font-weight: 500;
 
+    :link {
+        color: $color-primary;
+    }
+
+    :hover {
+    }
 }
 
-
-/*** buton hover **/ 
+/*** buton hover **/
 
 @mixin setEffectHover {
     transition: $bezier-transition;
 
-        &:hover {
-            color: $color-white
-        }
+    &:hover {
+        color: $color-white;
+    }
 }
-/*** buton hover for button with background**/ 
+@mixin setEffectHoverSearchHeader {
+    transition: $bezier-transition;
+
+    &:hover {
+        color: $color-primary;
+        font-family: "sf-display-m";
+        transform: scale(1.08);
+    }
+}
+
+/*** buton hover for button with background**/
 
 @mixin setEffectHoverRealBtn {
     transition: $bezier-transition;
 
-        &:hover {
-            color: $color-white;
-            transform: scale(1.08);
-        }
+    &:hover {
+        color: $color-white;
+        background-color: rgba($color-primary, 0.5);
+        //transform: scale(1.08);
+    }
+}
+
+/*** SET DEFAULT STATE BUTTONS ****/
+
+@mixin setDefaultBtn {
+    border: none;
+    outline: none;
+    transition: $bezier-transition;
+
+    &:hover {
+        opacity: .5;
+    }
 }

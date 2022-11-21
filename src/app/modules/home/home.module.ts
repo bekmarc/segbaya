@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
-import { HeaderComponent } from './components/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthorsSectionComponent } from './components/authors-section/authors-section.component';
@@ -13,12 +12,12 @@ import { PublishersSectionComponent } from './components/publishers-section/publ
 import { SectionHeaderComponent } from './components/acceuil/section-header/section-header.component';
 import { SectionHeaderAllComponent } from './components/acceuil/section-header-all/section-header-all.component';
 import { BooksSectionComponent } from './components/books-section/books-section.component';
+import { LayoutsModule } from 'src/app/layouts/layouts.module';
 
 
 @NgModule({
   declarations: [
     AcceuilComponent,
-    HeaderComponent,
     SearchbarComponent,
     AuthorsSectionComponent,
     AudiosSectionComponent,
@@ -31,6 +30,7 @@ import { BooksSectionComponent } from './components/books-section/books-section.
   imports: [
     CommonModule,
     HomeRoutingModule,
+    LayoutsModule,
     SharedModule
   ]
 })

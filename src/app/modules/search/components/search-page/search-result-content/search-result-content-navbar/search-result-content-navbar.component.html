@@ -1,0 +1,5 @@
+<div class="navbar">
+    <a [ngClass]="typePodCast === 'book' ? 'active-item':''"  (click)="isClickMe({typePodCast:'book'})" class="navbar-item">E-Books</a>
+    <a [ngClass]="typePodCast === 'video' ? 'active-item':''"  (click)="isClickMe({typePodCast:'video'})" class="navbar-item">Videos</a>
+    <a  [ngClass]="typePodCast === 'audio' ? 'active-item':''" (click)="isClickMe({typePodCast:'audio'})" class="navbar-item">Audios</a>
+</div>

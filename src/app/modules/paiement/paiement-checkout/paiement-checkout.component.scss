@@ -1,0 +1,145 @@
+@import "src/assets/sass/index";
+
+$margin-text: 1rem 0rem 1rem 0rem;
+
+.paiement-checkout {
+    color: $color-black;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+
+    &__title {
+        font-size: 0.8rem;
+        font-family: "sf-display-m";
+    }
+
+    &__divider {
+        border-bottom: 0.1rem solid $color-grey-light-1;
+        margin: .4rem 0rem .4rem 0rem;
+    }
+
+    &__product {
+        display: flex;
+        flex-direction: row;
+
+        &__card {
+            width: 4rem;
+            height: 4rem;
+            background-color: $color-grey-light-1;
+            margin-right: 1rem;
+            border-radius: $border-radius-size-1;
+        }
+
+
+        &__title {
+            &__head {
+                color: $color-grey-dark-3;
+                font-size: 0.8rem;
+                font-family: $medium-font;
+
+            }
+
+            &__infos {
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                &__left {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    &__head {
+                        color: $color-grey-dark-2;
+                        font-size: 0.8rem;
+                        margin: .2rem 0rem .2rem 0rem;
+
+                    }
+
+                    &__content {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0rem 0rem .4rem 0rem;
+                        border:  .09rem solid $color-grey-light-1;
+                        border-radius: $border-radius-size-1;
+
+                        &__title {
+                            color: $color-grey-dark-2;
+                            font-size: 0.8rem;
+                            padding: .2rem .6rem .2rem .6rem;
+                        }
+                    }
+                }
+
+                &__right {
+                    font-size: 0.8rem;
+                    margin: .2rem 0rem .2rem 0rem;
+
+                }
+            }
+        }
+    }
+
+    &__offer {
+        background-color: $color-grey-light-1;
+        border-radius: $border-radius-size-1;
+        padding: .8rem 1rem;
+        &__title {
+            font-size: .8rem;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &__left {
+                font-family: $medium-font;
+                color: $color-secondary;
+            }
+            
+            &__right {
+                font-family: $medium-font;
+                font-size: .8rem;
+
+            }
+
+        }
+
+    }
+
+    &__totaux {
+        &__sous {
+            color: $color-grey-dark-3;
+            font-size: .8rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &__left {
+
+            }
+
+            &__right {
+                color: $color-black;
+            }
+        }
+        &__total {
+            margin-top: 1rem;
+            color: $color-grey-dark-3;
+            font-size: .8rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &__left {
+                font-family: $medium-font;
+            }
+
+            &__right {
+                color: $color-black;
+                font-family: $medium-font;
+
+            }
+        }
+    }
+}

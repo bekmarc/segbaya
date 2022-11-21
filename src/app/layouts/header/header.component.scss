@@ -1,0 +1,173 @@
+
+@import "src/assets/sass/abstracts/_variables";
+@import "src/assets/sass/base/_typography";
+@import "src/assets/sass/abstracts/_mixins";
+@import "src/assets/sass/base/_base";
+
+
+
+.acceuil__header {
+    color: $color-white;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .08rem solid rgba($color-grey-dark, $alpha: .4);
+
+    font-size: .9rem;
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        align-items: center;
+
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        align-items: center;
+
+    }
+
+    &__element {}
+
+    .search-overlay {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        opacity: 0;
+        visibility: hidden;
+        height: 100vh;
+        background-color: rgba($color-white, .6);
+        z-index: 2;
+        top: 0;
+    }
+
+    &__logo {
+        @include marginHeaderSearch();
+         @include removeLinkDefaultHearderSearch();
+         color: $color-grey-dark-3;
+    }
+
+    &__podcast {
+        @include marginHeaderSearch();
+        @include removeLinkDefaultHearderSearch();
+        transition: $bezier-transition;
+
+        @include setEffectHoverSearchHeader()
+
+    }
+
+    &__audio {
+        @include marginHeaderSearch();
+        @include removeLinkDefaultHearderSearch();
+        @include setEffectHoverSearchHeader();
+    }
+    &__video {
+        @include marginHeaderSearch();
+        @include removeLinkDefaultHearderSearch();
+        @include setEffectHoverSearchHeader();
+
+
+    }
+
+    &__space {
+        @include marginHeaderSearch();
+        @include removeLinkDefaultHearderSearch();
+        @include setEffectHoverSearchHeader();
+        @include inputStyle();
+        position: relative;
+        width: 30%;
+        z-index: 3;
+
+        .search-svg {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0rem;
+            height:2.7rem;
+            width:2.7rem;   
+
+            .svg-ico {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        .acceuil__header-searchbar {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: .6rem .4rem .6rem 2.5rem;
+            background-color: rgba($color-grey-light-1, $alpha: 1.0);
+            font-size: .87rem;
+            border-radius: .2rem;
+            transition: $bezier-transition;
+
+
+            &:focus {
+                background-color: $color-white;
+              
+
+
+            }
+           
+            
+        }
+
+    }
+
+    &__post-podcast {
+        @include marginHeaderSearch();
+        @include removeLinkDefaultHearderSearch();
+        color : $color-secondary;
+        border: .05rem solid rgba($color-grey-dark-2, .4);
+        padding: .6rem 1rem .6rem 1rem;
+        border-radius: .3rem;
+        transition: $bezier-transition;
+        &:hover {
+            color: $color-secondary;
+            background-color: rgba($color-grey-dark, .2);
+            
+        }
+
+    }
+
+    &__connect {
+        @include marginHeaderSearch();
+        @include removeLinkDefaultHearderSearch();
+        color : $color-primary;
+        @include setEffectHoverSearchHeader();
+
+
+    }
+
+    &__inscrire {
+        @include marginHeaderSearch();
+        @include removeLinkDefaultHearderSearch();
+        
+        background-color: $color-primary;
+        padding: .6rem 1.4rem .6rem 1.4rem;
+        border: none;
+        color: $color-white;
+        
+        @include setEffectHoverRealBtn();
+        border-radius: .3rem;
+
+        &:active {
+            background-color: rgba($color: #000000, $alpha: 1.0);
+        }
+    }
+
+
+}

@@ -1,0 +1,11 @@
+<div [ngSwitch]="choiceTypePod">
+    <div *ngSwitchCase="'audio'" class="container-value">
+        <app-audios-container></app-audios-container>
+    </div>
+    <div *ngSwitchCase="'book'" class="container-value">
+        <app-ebooks-container></app-ebooks-container>
+    </div>
+    <div *ngSwitchCase="'video'" class="container-value">
+        <app-videos-container></app-videos-container>
+    </div>
+</div>

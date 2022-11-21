@@ -12,6 +12,10 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderAcceuilComponent,
+    HeaderComponent
   ]
 })
 export class LayoutsModule { }

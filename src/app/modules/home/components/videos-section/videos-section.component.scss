@@ -1,0 +1,22 @@
+.books {
+    margin: 1.4rem;
+
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 17rem);
+        justify-content: center;
+
+        .book {
+
+        }
+    }
+
+
+}
+
+.my-head {
+    grid-row: 1 / 1;
+    grid-column: 1 / -1;
+}

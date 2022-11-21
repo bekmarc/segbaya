@@ -20,13 +20,28 @@ $color-white: #FFFFFF;;
 $color-black: #001F0D;
 
 // OPACITY
-$input-opacity-4: .2;
-$input-opacity-3: .6;
-$input-opacity-2: .8;
 $input-opacity-1: 1;
+$input-opacity-2: .8;
+$input-opacity-3: .6;
+$input-opacity-4: .2;
 
 // FONT
 $default-font-size: 1.6rem;
+$uno-rem-font-size: 1rem;
+$dot-9rem-font-size: .9rem;
+$dot-8rem-font-size: .8rem;
+$dot-7rem-font-size: .7rem;
+$dot-6rem-font-size: .6rem;
+$dot-5rem-font-size: .5rem;
+
+// FONT FAMILY
+$regular-font: 'sf-display';
+$medium-font: 'sf-display-m';
+$bold-font: 'sf-display-b';
+
+//BORDER-RADUIS
+$border-radius-size-1: .3rem;
+$border-radius-size-2: .3rem;
 
 
 // GRID
@@ -39,5 +54,10 @@ $gutter-horizontal: 6rem;
 $height : 24rem;
 
 /** TRANSITION BEZIER **/
-
 $bezier-transition : all .3s cubic-bezier(.23,-0.19,.88,1.17);
+
+
+//BORDER OF BUTTON
+
+
+$border-button: .05rem solid rgba($color-grey-dark-2, .4);
