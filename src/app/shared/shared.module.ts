@@ -9,6 +9,7 @@ import { VideoItemComponent } from './components/video-item/video-item.component
 import { LoadingOverlayComponent } from './components/loading-overlay/loading-overlay.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { SpinnerCoolComponent } from './components/spinner-cool/spinner-cool.component';
 
 export function playerFactory() {
   return player;
@@ -22,7 +23,8 @@ export function playerFactory() {
     BookItemComponent,
     ButtonComponent,
     VideoItemComponent,
-    LoadingOverlayComponent
+    LoadingOverlayComponent,
+    SpinnerCoolComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ export function playerFactory() {
     AuthorItemComponent,
     AudioItemComponent,
     BookItemComponent,
+    SpinnerCoolComponent,
     VideoItemComponent,
     ButtonComponent,
     LoadingOverlayComponent

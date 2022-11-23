@@ -1,0 +1,120 @@
+@import "src/assets/sass/index";
+
+.paiement-process {
+
+    &__content {
+
+        &__sub-title {
+            font-size: 1rem;
+            color: $color-grey-dark-3;
+
+            &__info {
+                font-size: $dot-8rem-font-size;
+                font-family: $medium-font;
+                color: $color-secondary;
+                margin: .4rem 0rem .8rem 0rem;
+            }
+        }
+
+        &__choice-card {
+
+            &--title {
+                font-size: .8rem;
+                margin: .4rem 0rem;
+                color: $color-grey-dark-2;
+
+            }
+
+            &__choicer {
+                display: flex;
+
+                &--cinetpay {
+                    border: .08rem solid $color-grey-dark;
+                    border-radius: $border-radius-size-1;                    width: 10rem;
+                    height: 4rem;
+                    margin: 0rem .5rem;
+                    transition: all .3s ease;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .type-card {
+                        width: 5rem;
+                        height: 5rem;
+                        
+                    }
+                    
+                    &:nth-child(1){
+                        margin-left: 0rem;
+                    }
+
+                    &:nth-last-child(1) {
+                        margin-right: 0rem;
+                    }
+
+                    &:hover {
+                        background-color: rgba($color-primary, .1);
+                        cursor: pointer;
+                        border-color: $color-primary;
+                    }
+                    &:active {
+                       
+                        border-color: $color-primary;
+                    }
+                }
+                &--cinetpay-active {
+
+                    transition: all .3s ease;
+                    background-color: rgba($color-primary, .1);
+                        cursor: pointer;
+                        border-color: $color-primary;
+
+                }
+
+                &--paypal {
+                    
+
+                }
+
+            }
+        }
+
+        &__input-phone {
+
+            &--title {
+                font-size: .8rem;
+                margin: .6rem 0rem;
+                color: $color-grey-dark-2;
+
+            }
+
+            &--input {
+                @include inputStyle();
+                outline: none;
+                border: .08rem solid $color-grey-dark;
+                border-radius: $border-radius-size-1;
+                width: 100%;
+                padding: .3rem .6rem;
+
+                &:focus {
+                    border-color: $color-primary;
+                }
+            }
+        }
+
+        &__submit-button__container {
+            &--button {
+                @include setDefaultBtn;
+                padding: .6rem 2rem;
+                border-radius: $border-radius-size-1;
+                margin-top: 2rem;
+                font-size: .9rem;
+                font-family: "sf-display-m";
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+
+    }
+
+}
