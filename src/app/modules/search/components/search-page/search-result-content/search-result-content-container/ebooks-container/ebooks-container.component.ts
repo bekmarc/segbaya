@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchPageService } from '../../../search-page.service';
 
 @Component({
   selector: 'app-ebooks-container',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EbooksContainerComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private searchPageServ : SearchPageService) { }
 
   ngOnInit(): void {
+  }
+
+  selectBook() {
+    this.searchPageServ.selectPodCast.next({id:1});
   }
 
 }
