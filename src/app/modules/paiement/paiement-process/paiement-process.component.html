@@ -12,10 +12,10 @@
                 Etape 2
             </p>
         </div>
-         <div class="paiement-process__steps-container__right">
-            <button class="paiement-process__steps-container__right-button">Precedent</button>
+         <div *ngIf="stepForPaiement === 2" class="paiement-process__steps-container__right">
+            <button type="button" (click)="goToPreviousPayStep()" class="paiement-process__steps-container__right-button">Precedent</button>
         </div>
     </div>
-    <app-paiement-process-step-un></app-paiement-process-step-un>
-    <!-- <app-paiement-process-step-dux></app-paiement-process-step-dux> -->
+    <app-paiement-process-step-un *ngIf="stepForPaiement === 1" ></app-paiement-process-step-un>
+    <app-paiement-process-step-dux *ngIf="stepForPaiement === 2"  ></app-paiement-process-step-dux>
 </div>

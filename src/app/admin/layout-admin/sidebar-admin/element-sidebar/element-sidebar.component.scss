@@ -1,0 +1,47 @@
+@import "src/assets/sass/index";
+
+$margin-text: 1rem 0rem 1rem 0rem;
+
+.menu-side {
+    padding-left: 1rem;
+    list-style: none;
+
+    &-childs {
+        padding: .1rem 1.4rem;
+        list-style: none;
+
+        .side__child {
+            line-height: 1.8rem;
+
+            &:hover {
+                display: block;
+                background-color: $color-primary;
+                width: 100%;
+            }
+        }
+
+
+    }
+    &__link {
+
+        text-decoration: none;
+
+        &:link{
+            color: $color-primary;
+        }
+
+        &:visited {
+
+        }
+        &:hover {
+            display: block;
+            background-color: $color-primary;
+            width: 100%;
+        }
+
+        &:active {
+
+        }
+
+    }
+}

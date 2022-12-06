@@ -115,6 +115,9 @@
                 display: flex;
                 align-items: center;
             }
+            &--button--pending {
+               opacity: .4;
+            }
         }
 
     }

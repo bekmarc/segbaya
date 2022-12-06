@@ -15,9 +15,13 @@
     </div>
     <div class="paiement-process__content__submit-button__container">
         
-        <button class="paiement-process__content__submit-button__container--button">
+        <button
+        (click)="endForStep01()"
+        [disabled]="isPendingStep"
+        [ngClass]="isPendingStep === true ? 'paiement-process__content__submit-button__container--button--pending':''"
+        class="paiement-process__content__submit-button__container--button ">
             Continuer le paiement
-            <app-spinner-cool></app-spinner-cool>
+            <app-spinner-cool *ngIf="isPendingStep === true" ></app-spinner-cool>
 
         </button>
     </div>
